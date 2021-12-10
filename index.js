@@ -7,6 +7,7 @@ process.on("SIGINT", () => process.exit());
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
+  res.setHeader("Server", "Node/v17.1");
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   res.end(`<!DOCTYPE html>
 <html lang="en">
